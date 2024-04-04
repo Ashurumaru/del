@@ -1,0 +1,22 @@
+﻿<Window x:Class="laba9.AddLegalPersonsTable"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:laba9"
+        mc:Ignorable="d"
+        Title="AddLegalPersonsTable" Height="470" Width="400">
+    <Grid Margin="10">
+        <StackPanel Margin="10">
+            <TextBlock HorizontalAlignment="Center" Text="Код Поставщика" TextWrapping="Wrap" VerticalAlignment="Top" />
+            <TextBox Grid.Column="1" HorizontalAlignment="Center"  x:Name="one"   Width="174" Height="30"/>
+            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Название:" Margin="0 20 0 0" VerticalAlignment="Top" />
+            <TextBox Grid.Column="1" HorizontalAlignment="Center"  x:Name="two"  Width="175" Height="30" />
+            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="НалоговыйНомер:" Margin="0 20 0 0" VerticalAlignment="Top" />
+            <TextBox Grid.Column="1" HorizontalAlignment="Center"  x:Name="thee"  Width="175" Height="30"/>
+            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="НомерСвидетельстваНДС:" Margin="0 20 0 0" VerticalAlignment="Top" />
+            <TextBox Grid.Column="1" HorizontalAlignment="Center"  x:Name="four"  Width="175" Height="30"/>
+            <Button Click="BtnSave_Click" Width="150" Height="30" Content="Сохранить" Margin="0 120 0 0" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+        </StackPanel>
+    </Grid>
+</Window>

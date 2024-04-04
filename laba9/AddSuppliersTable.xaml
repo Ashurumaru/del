@@ -1,0 +1,21 @@
+﻿<Window x:Class="laba9.AddSuppliersTable"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:laba9"
+      mc:Ignorable="d" 
+      Height="470" Width="400"
+      Title="AddSuppliersTable">
+    <Grid Margin="10">
+        <StackPanel Margin="10">
+            <TextBlock HorizontalAlignment="Center" Text="Код Поставщика" TextWrapping="Wrap" VerticalAlignment="Top" />
+            <TextBox Grid.Column="1" HorizontalAlignment="Center"  x:Name="one"   Width="174" Height="30"/>
+            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Адрес:" Margin="0 20 0 0" VerticalAlignment="Top" />
+            <TextBox Grid.Column="1" HorizontalAlignment="Center"  x:Name="two"  Width="175" Height="30" />
+            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Примечание:" Margin="0 20 0 0" VerticalAlignment="Top" />
+            <TextBox Grid.Column="1" HorizontalAlignment="Center"  x:Name="thee"  Width="175" Height="30"/>
+            <Button Click="BtnSave_Click" Width="150" Height="30" Content="Сохранить" Margin="0 180 0 0" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+        </StackPanel>
+    </Grid>
+</Window>

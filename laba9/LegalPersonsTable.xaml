@@ -1,0 +1,51 @@
+﻿<Page x:Class="laba9.LegalPersonsTable"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:laba9"
+        mc:Ignorable="d"
+        Title="LegalPersonsTable" 
+        d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+
+        <DataGrid BorderThickness="0" Loaded="DataGrid_Loaded"  x:Name="DataGridLegalPersons" Background="Transparent" HeadersVisibility="Column" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="Код Поставщика">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <ComboBox SelectedValue="{Binding КодПоставщика, UpdateSourceTrigger=PropertyChanged}"
+                              DisplayMemberPath="Code"
+                              SelectedValuePath="Code"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Header="Название"  Binding="{Binding Название}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="НалоговыйНомер" Binding="{Binding НалоговыйНомер}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="НомерСвидетельстваНДС" Binding="{Binding НомерСвидетельстваНДС}" Width="*"></DataGridTextColumn>
+                <DataGridTemplateColumn Width="auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Редактировать" Name="BtnEdit" Click="BtnEdit_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Width="auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Удалить" Name="BtnDelete" Click="BtnDelete_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Grid Grid.Row="1">
+            <Button Click="BtnAdd_Click" Width="100" Height="30" Content="Добавить" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+    </Grid>
+</Page>
